@@ -247,6 +247,7 @@ ifeq ($(DUMP),1)
     endif
     ifneq ($(CONFIG_USB)$(CONFIG_USB_SUPPORT),)
       ifneq ($(CONFIG_USB_ARCH_HAS_HCD)$(CONFIG_USB_EHCI_HCD),)
+	FEATURES += usb
       endif
     endif
     ifneq ($(CONFIG_PCMCIA)$(CONFIG_PCCARD),)
