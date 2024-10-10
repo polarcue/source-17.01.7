@@ -13,7 +13,7 @@ __target_inc=1
 DEVICE_TYPE?=router
 
 # Default packages - the really basic set
-DEFAULT_PACKAGES:=base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd
+DEFAULT_PACKAGES:=base-files libc libgcc busybox dropbear mtd opkg netifd fstools uclient-fetch logd
 # For nas targets
 DEFAULT_PACKAGES.nas:=block-mount fdisk lsblk mdadm
 # For router targets
@@ -247,7 +247,6 @@ ifeq ($(DUMP),1)
     endif
     ifneq ($(CONFIG_USB)$(CONFIG_USB_SUPPORT),)
       ifneq ($(CONFIG_USB_ARCH_HAS_HCD)$(CONFIG_USB_EHCI_HCD),)
-        FEATURES += usb
       endif
     endif
     ifneq ($(CONFIG_PCMCIA)$(CONFIG_PCCARD),)
