@@ -467,8 +467,7 @@ endef
 
 define Device/tl-wr720n-v3
     $(Device/tplink-4mlzma)
-    DEVICE_TITLE := TP-LINK TL-WR720N v3
-    DEVICE_PACKAGES := kmod-usb-core kmod-usb2
+    DEVICE_TITLE := TP-LINK TL-WR720N 
     BOARDNAME := TL-WR720N-v3
     DEVICE_PROFILE := TLWR720
     TPLINK_HWID := 0x07200103
